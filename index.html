@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Test Extensions - Day 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 700px;
+            width: 100%;
+        }
+        
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        
+        .test-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #28a745;
+        }
+        
+        .test-section h2 {
+            color: #28a745;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .test-section p {
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #28a745;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s;
+            width: 100%;
+        }
+        
+        button:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        #result {
+            margin-top: 20px;
+            padding: 20px;
+            background: #fff3cd;
+            border-radius: 10px;
+            display: none;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Setup Complete!-Abdurrahim</h1>
+        <p class="subtitle">Testing all VS Code extensions...</p>
+        
+        <div class="test-section">
+            <h2>✅ Live Server <span class="status">WORKING</span></h2>
+            <p>Kamu bisa lihat halaman ini = Live Server aktif! Coba edit text ini, save (Ctrl+S), dan lihat otomatis reload!</p>
+        </div>
+        
+        <div class="test-section">
+            <h2>✅ Prettier <span class="status">WORKING</span></h2>
+            <p>Save file ini (Ctrl+S). Code otomatis rapi? That's Prettier magic!</p>
+        </div>
+        
+        <div class="test-section">
+            <h2>✅ Auto Rename Tag <span class="status">WORKING</span></h2>
+            <p>Coba edit tag &lt;section class="container"&gt; jadi &lt;section&gt;. Closing tag otomatis berubah!</p>
+        </div>
+        
+        <div class="test-section">
+            <h2>✅ Material Icons <span class="status">WORKING</span></h2>
+            <p>Lihat sidebar VS Code, file icons sekarang colorful dan cantik!</p>
+        </div>
+        
+        <div class="test-section">
+            <h2>✅ Solarized Dark Theme <span class="status">ACTIVE</span></h2>
+            <p>Great choice! One of the best themes for long coding sessions.</p>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">9</div>
+                <div class="stat-label">Extensions Installed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Setup Complete</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">Day 1</div>
+                <div class="stat-label">Journey Started</div>
+            </div>
+        </div>
+        
+        <button onclick="celebrate()">🎊 Test JavaScript!</button>
+        
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function celebrate() {
+            const result = document.getElementById('result');
+            result.style.display = 'block';
+            
+            const messages = [
+                "🎉 JavaScript WORKING!",
+                "🔥 All Extensions READY!",
+                "💪 You're ready to become a Web Developer!",
+                "🚀 Let's build amazing things!",
+                "⭐ Your journey starts NOW!"
+            ];
+            
+            let index = 0;
+            result.innerHTML = `<h2 style="color: #667eea; text-align: center;">${messages[index]}</h2>`;
+            
+            const interval = setInterval(() => {
+                index++;
+                if (index < messages.length) {
+                    result.innerHTML = `<h2 style="color: #667eea; text-align: center;">${messages[index]}</h2>`;
+                } else {
+                    clearInterval(interval);
+                    result.innerHTML = `
+                        <h2 style="color: #28a745; text-align: center;">✅ SETUP 100% COMPLETE!</h2>
+                        <p style="text-align: center; margin-top: 10px; color: #555;">
+                            Laptop: Asus Zenbook 14 OLED Ultra 5 ✨<br>
+                            Extensions: All Working ✅<br>
+                            Folder Structure: Professional 🎯<br>
+                            <strong style="color: #667eea;">YOU'RE READY TO CODE! 🚀</strong>
+                        </p>
+                    `;
+                }
+            }, 1000);
+        }
+        
+        // Auto welcome message
+        window.onload = function() {
+            console.log("🎉 Welcome to Web Development!");
+            console.log("📁 Project Location: D:\\Project Coding\\WebDevelopment");
+            console.log("💻 Extensions: All Active");
+            console.log("🚀 Let's start coding!");
+        }
+    </script>
+</body>
+</html>
