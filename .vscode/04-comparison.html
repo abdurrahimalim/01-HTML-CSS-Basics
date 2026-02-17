@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Semantic vs Non-Semantic</title>
+</head>
+<body>
+    <h1>Perbandingan</h1>
+
+    <!-- NON-SEMANTIC (Bad way ❌) -->
+    <div id="header">
+        <div id="nav">
+            <a href="#">Home</a>
+        </div>
+    </div>
+    <div id="content">
+        <div class="post">
+            <p>This is a post</p>
+        </div>
+    </div>
+    <div id="footer">
+        <p>Footer here</p>
+    </div>
+
+    <hr>
+
+    <!-- SEMANTIC (Good way ✅) -->
+    <header>
+        <nav>
+            <a href="#">Home</a>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <p>This is a post</p>
+        </article>
+    </main>
+    <footer>
+        <p>Footer here</p>
+    </footer>
+
+</body>
+</html>
